@@ -1,0 +1,1025 @@
+
+/* 색상코드
+초록: #0A8C5B
+갈색: #8d7c66
+*/
+
+/*폰트 불러오기*/
+@font-face {
+  font-family: 'GabiaOndam'; /*사용하고 싶은 font-family명을 지정*/
+  src: url("GabiaOndam.ttf") format('truetype'); /*폰트파일 불러오기*/
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+#road{
+  background-color: #0A8C5B;
+  background-image: url(road.webp);
+  background-size: 2200px;
+  /* background-size: 160%; */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#scroll{
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+div{
+  scroll-snap-align: start;
+
+  display: flex;
+  height: 100vh;
+  color:white;
+  justify-content: center;
+  align-items: center;
+}
+
+/*animation*/
+@keyframes reveal {
+  from {
+    opacity:0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity:1;
+    transform: translateY(0);}
+}
+
+@keyframes rotate {
+  from{transform: rotate(0);}
+  to{transform: rotate(360deg);}
+}
+
+.reveals{animation: reveal 2s ease-in 0s 1 normal none;}
+
+/*header*/
+.header{
+  background-color: #0A8C5B;
+  font-family: 'GabiaOndam';
+  font-size: 6rem;
+}
+#길 {
+  position: relative;
+  left:20vw; top: -25vh;
+}
+#끝 {
+  position: relative;
+  left: 50vw; top:-13vh;
+}
+#에 {
+  position: relative;
+  left: 53vw; top:-13vh;
+}
+#서 {
+  position: relative;
+  left: 55vw; top:-5vh;
+}
+#만 {
+  position: relative;
+  left: -10vw; top:20vh;
+}
+#나 {
+  position: relative;
+  left: 5vw; top:30vh;
+}
+#자 {
+  position: relative;
+  left: 10vw; top:20vh;
+}
+#star1{
+  position: relative;
+  width:10vw;
+  left: 15vw; top: -30vh;
+}
+#star2{
+  position: relative;
+  width:6vw;
+  left: -35vw; top:20vh;
+}
+#sparkle{
+  position: relative;
+  width:10vh;
+  left: -65vw;
+}
+#swing1 {
+  position: relative;
+  width:15vw;
+  left: -55vw; top: -15vh;
+}
+#swing2{
+  position: relative;
+  width:15vw;
+  left: -20vw; top:20vh;
+}
+
+/*intro*/
+.intro a{
+  position: relative;
+  left: -10vw;
+  top: -5vh;
+}
+.intro img{
+  position: relative;
+  width: 5vw;
+  left: 25vw;
+  top: -5vh;
+}
+
+/* story 1 */
+.story1 a{
+  position: relative;
+  left: 10vw;
+  text-align: right;
+}
+.story1 img{
+  width: 5vw;
+  left: 6vw;
+}
+
+/* story 2 */
+.story2 a{
+  position: relative;
+  left: -25vw;
+  top:2vh;
+}
+.story2 img{
+  position: relative;
+  width: 5vw;
+  left: 20vw;
+}
+
+/* story 3 */
+.story3 a{
+  position: relative;
+  left: 10vw;
+  text-align: right;
+}
+.story3 img{
+  position: relative;
+  width: 5vw;
+
+}
+
+h2{font-size: 2.5rem;}
+p{line-height: 180%;
+  font-size: 1.2rem;}
+
+a{color: white;}
+a:hover{color:rgb(87, 87, 87);}
+
+@media (max-width:1050px) and (max-height:800px) {
+  #road{
+    width:100vw;
+    background-size: 150%;
+    background-position: center -80vh;
+  }
+  #scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  .header{
+    height: 100vh;
+    font-size: 5rem;
+  }
+  #길 {
+    position: relative;
+    left:25vw; top: -25vh;
+  }
+  #끝 {
+    position: relative;
+    left: 50vw; top:-13vh;
+  }
+  #에 {
+    position: relative;
+    left: 53vw; top:-13vh;
+  }
+  #서 {
+    position: relative;
+    left: 55vw; top:-5vh;
+  }
+  #만 {
+    position: relative;
+    left: -10vw; top:20vh;
+  }
+  #나 {
+    position: relative;
+    left: 3vw; top:30vh;
+  }
+  #자 {
+    position: relative;
+    left: 8vw; top:20vh;
+  }
+  #star1{
+    position: relative;
+    width:10vw;
+    left: 15vw; top: -30vh;
+  }
+  #star2{
+    position: relative;
+    width:6vw;
+    left: -40vw; top:20vh;
+  }
+  #sparkle{
+    position: relative;
+    width:10vh;
+    left: -68vw;
+  }
+  #swing1 {
+    position: relative;
+    width:15vw;
+    left: -62vw; top: -15vh;
+  }
+  #swing2{
+    position: relative;
+    width:15vw;
+    left: -25vw; top:20vh;
+  }
+
+  .intro a{
+    position: relative;
+    left: -15vw;
+    top: 5vh;
+  }
+  .intro img{
+    width: 8vw;
+    left: 35vw;
+    top:3vh;
+  }
+  .story1 a{
+    position: relative;
+    left: 10vw;
+  }
+  .story1 img{
+    position: relative;
+    width: 8vw;
+    left:30
+  }
+  .story2 a{
+    position: relative;
+    left: -20vw;
+  }
+  .story2 img{
+    width: 8vw;
+    left: 32vw;
+  }
+  .story3 a{
+    position: relative;
+    left:10vw;
+  }
+  .story3 img{
+    width: 8vw;
+    left: 15vw;
+    top: -8vh;
+  }
+
+  h2{font-size: 2.5rem;}
+  p{line-height: 150%;
+    font-size: 1.5rem;}
+}
+
+
+/* Small sized web */
+@media (max-width:1050px) and (min-height:1000px) {
+  #road{
+    width:100vw;
+    background-size: 340%;
+    background-position: center -80vh;
+  }
+  #scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  .header{
+    height: 100vh;
+    font-size: 6rem;
+  }
+  #길 {
+    position: relative;
+    left:55vw; top: -35vh;
+  }
+  #끝 {
+    position: relative;
+    left: 100vw; top:-25vh;
+  }
+  #에 {
+    position: relative;
+    left: 85vw; top:-13vh;
+  }
+  #서 {
+    position: relative;
+    left: 62vw; top:-2vh;
+  }
+  #만 {
+    position: relative;
+    left: 0vw; top:15vh;
+  }
+  #나 {
+    position: relative;
+    left: 40vw; top:23vh;
+  }
+  #자 {
+    position: relative;
+    left: 26vw; top:35vh;
+  }
+  #star1{
+    position: relative;
+    width:13vw;
+    left: -28vw; top: -30vh;
+  }
+  #star2{
+    position: relative;
+    width:13vw;
+    left: -20vw; top:20vh;
+  }
+  #sparkle{
+    position: relative;
+    width:8vh;
+    left: -50vw;
+    top:5vh;
+  }
+  #swing1 {
+    position: relative;
+    width:25vw;
+    left: -55vw; top: -15vh;
+  }
+  #swing2{
+    position: relative;
+    width:25vw;
+    left: -100vw; top:35vh;
+  }
+
+  .intro a{
+    position: relative;
+    left: -15vw;
+    top: 5vh;
+  }
+  .intro img{
+    width: 10vw;
+    left: 50vw;
+    top:3vh;
+  }
+  .story1 a{
+    position: relative;
+    left: 10vw;
+  }
+  .story1 img{
+    width: 10vw;
+  }
+  .story2 a{
+    position: relative;
+    left: -15vw;
+  }
+  .story2 img{
+    width: 10vw;
+    left: 55vw;
+  }
+  .story3 a{
+    position: relative;
+    left:10vw;
+  }
+  .story3 img{
+    width: 10vw;
+    left: 0vw;
+  }
+
+  h2{font-size: 3.5rem;}
+  p{line-height: 150%;
+    font-size: 1.5rem;}
+}
+
+/*Tablets*/
+@media (max-width:914px) {
+  #road{
+    width:100vw;
+    background-size: 330%;
+    background-position: center -60vh;
+  }
+  #scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  .header{
+    height: 100vh;
+    font-size: 4rem;
+  }
+  #길 {
+    position: relative;
+    left:60vw; top: -35vh;
+  }
+  #끝 {
+    position: relative;
+    left: 110vw; top:-28vh;
+  }
+  #에 {
+    position: relative;
+    left: 97vw; top:-16vh;
+  }
+  #서 {
+    position: relative;
+    left: 80vw; top:-4vh;
+  }
+  #만 {
+    position: relative;
+    left: 14vw; top:10vh;
+  }
+  #나 {
+    position: relative;
+    left: 60vw; top:20vh;
+  }
+  #자 {
+    position: relative;
+    left: 47.5vw; top:32vh;
+  }
+  #star1{
+    position: relative;
+    width:15vw;
+    left: -6vw; top: -38vh;
+  }
+  #star2{
+    position: relative;
+    width:15vw;
+    left: -10vw; top:10vh;
+  }
+  #sparkle{
+    position: relative;
+    width:8vh;
+    left: -52vw;
+    top:-5vh;
+  }
+  #swing1 {
+    position: relative;
+    width:35vw;
+    left: -50vw; top: -15vh;
+  }
+  #swing2{
+    position: relative;
+    width:35vw;
+    left: -95vw; top:30vh;
+  }
+
+  .intro a{
+    position: relative;
+    left: -10vw;
+    top:10vh;
+  }
+  .intro img{
+    width:8vw;
+    left:38vw;
+    top:0vh;
+  }
+  .story1 a{
+    position: relative;
+    left: 10vw;
+  }
+  .story1 img{
+    width:8vw;
+    left:38vw;
+    top:0vh;
+  }
+  .story2 a{
+    position: relative;
+    left: -10vw;
+    top: -5vh;
+  }
+  .story2 img{
+    width:8vw;
+    left:40vw;
+    top:-15vh;
+  }
+  .story3 a{
+    position: relative;
+    left:10vw;
+    top:-10vh;
+  }
+  .story3 img{
+    width:8vw;
+    left:15vw;
+    top:-15vh;
+  }
+
+
+  h2{font-size: 2.5rem;}
+  p{line-height: 150%;
+    font-size: 1.5rem;}
+}
+
+/*길 끝에서 만나자*/
+@media (max-width:540px) {
+  #road{
+    background-size: 200%;
+    background-position: center -20vh;
+  }
+  #scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  div{
+    height: 50vh;
+  }
+  .header{
+    height: 100vh;
+    font-size: 3rem;
+  }
+  #길 {
+    position: relative;
+    left:60vw; top: -35vh;
+  }
+  #끝 {
+    position: relative;
+    left: 105vw; top:-25vh;
+  }
+  #에 {
+    position: relative;
+    left: 91vw; top:-13vh;
+  }
+  #서 {
+    position: relative;
+    left: 70vw; top:-2vh;
+  }
+  #만 {
+    position: relative;
+    left: 10vw; top:10vh;
+  }
+  #나 {
+    position: relative;
+    left: 53.5vw; top:23vh;
+  }
+  #자 {
+    position: relative;
+    left: 40vw; top:35vh;
+  }
+  #star1{
+    position: relative;
+    width:15vw;
+    left: -10vw; top: -35vh;
+  }
+  #star2{
+    position: relative;
+    width:15vw;
+    left: -10vw; top:20vh;
+  }
+  #sparkle{
+    position: relative;
+    width:8vh;
+    left: -38vw;
+    top: 5vh;
+  }
+  #swing1 {
+    position: relative;
+    width:30vw;
+    left: -60vw; top: -17vh;
+  }
+  #swing2{
+    position: relative;
+    width:30vw;
+    left: -100vw; top:35vh;
+  }
+
+
+  .intro a{
+    position: relative;
+    left: -20vw;
+    top: 17vh;
+  }
+  .intro img{
+    left: 20vw;
+    top: 10vh;
+  }
+  .story1 a{
+    position: relative;
+    left: 0vw;
+    top: -5vh;
+  }
+  .story1 img{
+    position: relative;
+    left:15vw;
+    top:8vh;
+  }
+  .story2 a{
+    position: relative;
+    left: 10vw;
+    top:-10vh;
+  }
+  .story2 img{
+    position: relative;
+    left:3vw;
+    top:-10vh;
+  }
+  .story3 a{
+    text-align: left;
+    position: relative;
+    left:-20vw;
+    top: 0vh;
+  }
+  .story3 img{
+    position: relative;
+    left: 25vw;
+    top:-3vh;
+  }
+
+  h2{font-size: 1.5rem;}
+  p{line-height: 150%;
+    font-size: 0.8rem;}
+}
+
+/* Large mobile */
+@media (max-width:450px) {
+  #road{
+    background-size: 200%;
+    background-position: center -20vh;
+  }
+  #scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  div{
+    height: 50vh;
+  }
+
+  #길 {
+    position: relative;
+    left:80vw; top: -40vh;
+  }
+  #끝 {
+    position: relative;
+    left: 125vw; top:-25vh;
+  }
+  #에 {
+    position: relative;
+    left: 110vw; top:-15vh;
+  }
+  #서 {
+    position: relative;
+    left: 90vw; top:-5vh;
+  }
+  #만 {
+    position: relative;
+    left: 25vw; top:10vh;
+  }
+  #나 {
+    position: relative;
+    left: 65vw; top:25vh;
+  }
+  #자 {
+    position: relative;
+    left: 50vw; top:35vh;
+  }
+  #star1{
+    position: relative;
+    width:18vw;
+    left: 5vw; top: -38vh;
+  }
+  #star2{
+    position: relative;
+    width:20vw;
+    left: -20vw; top:20vh;
+  }
+  #sparkle{
+    position: relative;
+    width:8vh;
+    left: -35vw;
+  }
+  #swing1 {
+    position: relative;
+    width:45vw;
+    left: -65vw; top: -25vh;
+  }
+  #swing2{
+    position: relative;
+    width:35vw;
+    left: -120vw; top:35vh;
+  }
+
+
+  .header{
+    height: 100vh;
+    font-size: 2.5rem;
+    line-height: 100%;
+  }
+  .intro a{
+    position: relative;
+    left: -10vw;
+    top: 5vh;
+  }
+  .intro img{
+    width:8vw;
+    left:40vw;
+    top:1vh;
+  }
+  .story1 a{
+    position: relative;
+    left: 10vw;
+    top: -12vh;
+  }
+  .story1 img{
+    position: relative;
+    width:8vw;
+    left:20vw;
+    top:-17vh;
+  }
+  .story2 a{
+    position: relative;
+    left: 10vw;
+    top:10vh;
+    text-align: right;
+  }
+  .story2 img{
+    position: relative;
+    width:8vw;
+    top:5vh;
+    left:20vw;
+  }
+  .story3 a{
+    text-align: left;
+    position: relative;
+    left:-15vw;
+    top:3vh;
+  }
+  .story3 img{
+    position:relative;
+    width:8vw;
+    left:40vw;
+    top:-5vh;
+  }
+
+  h2{font-size: 1.5rem;}
+  p{line-height: 150%;
+    font-size: 0.8rem;}
+}
+
+/*iphone SE*/
+@media (max-width:375px) {
+  #road{
+    background-size: 200%;
+    /* background-size: 750px; */
+    background-position: center -20vh;
+  }
+  #scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  div{
+    height: 50vh;
+  }
+
+  #길 {
+    position: relative;
+    left:80vw; top: -40vh;
+  }
+  #끝 {
+    position: relative;
+    left: 125vw; top:-25vh;
+  }
+  #에 {
+    position: relative;
+    left: 107vw; top:-15vh;
+  }
+  #서 {
+    position: relative;
+    left: 80vw; top:-5vh;
+  }
+  #만 {
+    position: relative;
+    left: 15vw; top:10vh;
+  }
+  #나 {
+    position: relative;
+    left: 55vw; top:25vh;
+  }
+  #자 {
+    position: relative;
+    left: 39vw; top:35vh;
+  }
+  #star1{
+    position: relative;
+    width:18vw;
+    left: -10vw; top: -38vh;
+  }
+  #star2{
+    position: relative;
+    width:20vw;
+    left: -30vw; top:20vh;
+  }
+  #sparkle{
+    position: relative;
+    width:8vh;
+    left: -50vw;
+  }
+  #swing1 {
+    position: relative;
+    width:35vw;
+    left: -75vw; top: -25vh;
+  }
+  #swing2{
+    position: relative;
+    width:35vw;
+    left: -125vw; top:38vh;
+  }
+  
+  .header{
+    height: 100vh;
+    font-size: 2.5rem;
+  }
+  .intro a{
+    position: relative;
+    left: -10vw;
+    top: 12vh;
+  }
+  .intro img{
+    width: 8vw;
+    left: 45vw;
+    top:7vh;
+  }
+  
+  .story1 a{
+    position: relative;
+    left: 5vw;
+    top: 8vh;
+  }
+  .story1 img{
+    position:relative;
+    width:8vw;
+    left: 19vw;
+    top: 2vh;
+  }
+
+  .story2 a{
+    position: relative;
+    text-align: left;
+    left: -10vw;
+    top: 1vh;
+  }
+  .story2 img{
+    width: 8vw;
+    left:48vw;
+    top:-5vh;
+  }
+
+  .story3 a{
+    position: relative;
+    text-align: right;
+    left:8vw;
+    top:-8vh;
+  }
+  .story3 img{
+    width:8vw;
+    left:10vw;
+    top:-10vh;
+  }
+
+  h2{font-size: 1.5rem;}
+  p{line-height: 150%;
+    font-size: 0.8rem;}
+}
+
+@media (max-width:360px) {
+  #road{
+    background-size: 200%;
+    background-position: center -20vh;
+  }
+  #scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  div{
+    height: 50vh;
+  }
+
+  .header{
+    height: 100vh;
+    font-size: 2.5rem;
+  }
+  .intro a{
+    position: relative;
+    left: -10vw;
+    top: 5vh;
+  }
+  .intro img{
+    width:8vw;
+    left:45vw;
+    top:0vh;
+  }
+  .story1 a{
+    position: relative;
+    left: 5vw;
+    top: -6vh;
+  }
+  .story1 img{
+    width:8vw;
+    left:20vw;
+    top:-12vh;
+  }
+  .story2 a{
+    position: relative;
+    text-align: right;
+    left: 5vw;
+    top:18vh;
+  }
+  .story2 img{
+    width:8vw;
+    left:20vw;
+    top:12vh;
+  }
+  .story3 a{
+    position: relative;
+    text-align: left;
+    left: -12vw;
+    top:8vh;
+  }
+  .story3 img{
+    width:8vw;
+    left:48vw;
+    top:2vh;
+  }
+
+  h2{font-size: 1.5rem;}
+  p{line-height: 150%;
+    font-size: 0.8rem;}
+}
+
+@media (max-width:280px) {
+  #road{
+    background-size: 250%;
+    background-position: center -20vh;
+  }
+  #scroll{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  div{
+    height: 50vh;
+  }
+
+  .header{
+    height: 100vh;
+    font-size: 2rem;
+  }
+  .intro a{
+    position: relative;
+    left: -10vw;
+    top: 8vh;
+  }
+  .intro img{
+    width:10vw;
+    left:50vw;
+    top:3vh;
+  }
+  .story1 a{
+    position: relative;
+    text-align: right;
+    left: 0vw;
+    top: 3vh;
+  }
+  .story1 img{
+    width:10vw;
+    left:15vw;
+    top:-3vh;
+  }
+  .story2 a{
+    position: relative;
+    text-align: left;
+    left: -10vw;
+    top:-5vh;
+  }
+  .story2 img{
+    width:10vw;
+    left:53vw;
+    top:-11vh;
+  }
+  .story3 a{
+    position: relative;
+    text-align: right;
+    left: 8vw;
+    top:-12vh;
+  }
+  .story3 img{
+    width:10vw;
+    left:8vw;
+    top:-20vh;
+  }
+
+  h2{font-size: 1.2rem;}
+  p{line-height: 150%;
+    font-size: 0.6rem;}
+}
+
+
